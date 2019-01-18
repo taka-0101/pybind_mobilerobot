@@ -17,8 +17,9 @@ private:
 public:
 	ARIA(std::vector<std::string> s_argv, std::string com);
 	~ARIA();
-	void robot_action(int i);
-	void gripper_action(int i);
+	void robot_action(int command);
+	void robot_action(int command, double par);
+	void gripper_action(int command);
 	void speedChange(float par){ speed = par; }
 	void rotationChange(float par){ rotation = par; }
 

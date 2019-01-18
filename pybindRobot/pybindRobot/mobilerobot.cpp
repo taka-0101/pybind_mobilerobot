@@ -49,8 +49,8 @@ ARIA::ARIA(std::vector<std::string> s_argv, std::string com){
 	robot->unlock();
 }
 
-void ARIA::robot_action(int i){
-	switch (i)
+void ARIA::robot_action(int command){
+	switch (command)
 	{
 	case 0:
 		robot->setVel(double(speed));
@@ -79,8 +79,38 @@ void ARIA::robot_action(int i){
 
 }
 
-void ARIA::gripper_action(int i){
-	switch (i)
+void ARIA::robot_action(int command, double par) {
+	switch (command)
+	{
+	case 0:
+		robot->setVel(double(par));
+		ArUtil::sleep(500);
+		break;
+	case 1:
+		robot->setVel(-1 * double(par));
+		ArUtil::sleep(500);
+		break;
+	case 2:
+		robot->setRotVel(double(par));
+		ArUtil::sleep(500);
+		break;
+	case 3:
+		robot->setRotVel(-1 * double(par));
+		ArUtil::sleep(500);
+		break;
+	case 4:
+		robot->setVel(0);
+		robot->setRotVel(0);
+		break;
+	default:
+		robot->stop();
+		break;
+	}
+
+}
+
+void ARIA::gripper_action(int command){
+	switch (command)
 	{
 	case 0:
 		gripper->gripOpen();

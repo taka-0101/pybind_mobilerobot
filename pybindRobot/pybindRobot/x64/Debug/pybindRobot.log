@@ -1,0 +1,6 @@
+﻿  mobilerobot.cpp
+c:\users\take\desktop\pybind_mobilerobot\pybindrobot\pybindrobot\mobilerobot.cpp(17): warning C4267: '=': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+  Source.cpp
+  コードを生成中...
+     ライブラリ C:\Users\take\Desktop\pybind_mobilerobot\pybindRobot\x64\Debug\pybindRobot.lib とオブジェクト C:\Users\take\Desktop\pybind_mobilerobot\pybindRobot\x64\Debug\pybindRobot.exp を作成中
+  pybindRobot.vcxproj -> C:\Users\take\Desktop\pybind_mobilerobot\pybindRobot\x64\Debug\pybindRobot.pyd
